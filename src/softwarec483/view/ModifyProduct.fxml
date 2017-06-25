@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="softwarec483.view.ModifyProductController">
+   <children>
+      <Label layoutX="15.0" layoutY="15.0" text="Modify Product">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Button layoutX="255.0" layoutY="16.0" mnemonicParsing="false" onAction="#handleSearchParts" text="Search" />
+      <TextField fx:id="searchPartsField" layoutX="325.0" layoutY="16.0" />
+      <AnchorPane layoutX="14.0" layoutY="50.0" prefHeight="325.0" prefWidth="235.0">
+         <children>
+            <Label layoutX="10.0" layoutY="15.0" text="ID">
+               
+            </Label>
+            <Label layoutX="10.0" layoutY="65.0" text="Name">
+               
+            </Label>
+            <Label layoutX="10.0" layoutY="115.0" text="Inv">
+               
+            </Label>
+            <Label layoutX="10.0" layoutY="165.0" text="Price">
+               
+            </Label>
+            <Label layoutX="125.0" layoutY="215.0" text="Min">
+               
+            </Label>
+            <Label layoutX="9.0" layoutY="215.0" text="Max">
+               
+            </Label>
+            <TextField fx:id="productIDField" editable="false" layoutX="55.0" layoutY="15.0" opacity="0.35" prefHeight="25.0" prefWidth="125.0" />
+            <TextField fx:id="productNameField" layoutX="55.0" layoutY="65.0" prefHeight="25.0" prefWidth="125.0" />
+            <TextField fx:id="productInventoryField" layoutX="55.0" layoutY="115.0" prefHeight="25.0" prefWidth="125.0" />
+            <TextField fx:id="productCostField" layoutX="55.0" layoutY="165.0" prefHeight="25.0" prefWidth="125.0" />
+            <TextField fx:id="productMinField" layoutX="167.0" layoutY="211.0" prefHeight="25.0" prefWidth="60.0" />
+            <TextField fx:id="productMaxField" layoutX="55.0" layoutY="211.0" prefHeight="25.0" prefWidth="60.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="255.0" layoutY="50.0" prefHeight="325.0" prefWidth="397.0">
+         <children>
+            <TableView fx:id="partsInventory" prefHeight="125.0" prefWidth="390.0">
+              <columns>
+                <TableColumn fx:id="inventoryIDColumn" prefWidth="55.0" text="Part ID" />
+                <TableColumn fx:id="inventoryNameColumn" prefWidth="125.0" text="Part Name" />
+                  <TableColumn fx:id="inventoryInventoryColumn" prefWidth="97.0" text="Inventory Level" />
+                  <TableColumn fx:id="inventoryCostColumn" prefWidth="108.0" text="Price per Unit" />
+              </columns>
+            </TableView>
+            <Button layoutX="305.0" layoutY="130.0" mnemonicParsing="false" onAction="#handleAdd" prefHeight="25.0" prefWidth="50.0" text="Add" />
+            <TableView fx:id="productParts" layoutY="162.0" prefHeight="125.0" prefWidth="390.0">
+               <columns>
+                  <TableColumn fx:id="partsIDColumn" prefWidth="52.0" text="Part ID" />
+                  <TableColumn fx:id="partsNameColumn" prefWidth="128.0" text="Part Name" />
+                  <TableColumn fx:id="partsInventoryColumn" prefWidth="104.0" text="Inventory Level" />
+                  <TableColumn fx:id="partsCostColumn" prefWidth="101.0" text="Price per Unit" />
+               </columns>
+            </TableView>
+            <Button layoutX="298.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="25.0" prefWidth="75.0" text="Delete" />
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutY="428.0" prefHeight="17.0" prefWidth="600.0" />
+      <ButtonBar layoutX="447.0" layoutY="375.0" prefHeight="40.0" prefWidth="180.0">
+         <buttons>
+            <Button mnemonicParsing="false" onAction="#handleSave" text="Save">
+               
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleCancel" text="Cancel">
+               
+            </Button>
+         </buttons>
+      </ButtonBar>
+   </children> 
+</AnchorPane>
